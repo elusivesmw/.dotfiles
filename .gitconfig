@@ -3,6 +3,8 @@
     email = 78516603+elusivesmw@users.noreply.github.com
 [core]
     editor = nvim
+[diff]
+    tool = nvimdiff
 [init]
     defaultBranch = main
 [safe]
