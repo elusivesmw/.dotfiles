@@ -10,13 +10,20 @@ set noswapfile
 nnoremap <C-j> :bn<cr>
 nnoremap <C-k> :bp<cr>
 
+" auto close
+inoremap ( ()<Esc>ha
+inoremap { {}<Esc>ha
+inoremap [ []<Esc>ha
+inoremap " ""<Esc>ha
+inoremap ' ''<Esc>ha
+inoremap ` ``<Esc>ha
 
 "nnoremap <C-_> :Telescope current_buffer_fuzzy_find sorting_strategy=ascending <cr>
 "nnoremap <C-_> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find({sorting_strategy="ascending", layout_config={horizontal={prompt_position="top"}}})<cr>
 
 " Fuzzy finding mappings
 nnoremap <C-_> <cmd>lua require('elusive').curr_buf()<cr>
-nnoremap <C-f> <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <C-f> <cmd>lua require('telescope.builtin').find_files({hidden=false})<cr>
 " reload settings ...not working atm
 "nnoremap <F4> :lua package.loaded.elusive = nil<cr>:source ~/.config/nvim/init.vim<cr>
 
