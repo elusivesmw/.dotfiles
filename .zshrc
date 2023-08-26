@@ -101,8 +101,9 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
+alias repos="cd ~/repos/"
 #wsl
-alias repos=/mnt/c/Users/jay/source/repos
+#alias repos="cd /mnt/c/Users/jay/source/repos"
 
 
 export NVM_DIR="$HOME/.nvm"
