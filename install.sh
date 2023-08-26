@@ -17,7 +17,8 @@ nvm install 18
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # install neovim nightly
-cd ~
+mkdir -p ~/repos
+cd ~/repos
 git clone --branch nightly https://github.com/neovim/neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install

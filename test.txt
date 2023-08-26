@@ -1,0 +1,8 @@
+* 49ab347 (HEAD -> main, origin/main, origin/HEAD) add rust
+* e2f00d6 update repos alias
+* c30d725 auto close parens, etc
+* 10c0a8a separate install from symlink scripts
+* 99348ce change store
+* 19088e9 add install scripts, difftool
+* bb806e1 add tmux and install script
+* 56f9dfe Initial commit
