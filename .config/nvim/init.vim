@@ -4,6 +4,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set noswapfile
+set list
+set listchars=tab:>=,trail:.
 
 "remaps
 " Buffer navigation
