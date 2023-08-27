@@ -1,14 +1,23 @@
 #!/bin/bash
 
 # create missing dirs
-mkdir -p ~/.config/nvim
-mkdir -p ~/.config/nvim/lua
+ds=(
+    ~/.config/nvim
+    ~/.config/nvim/lua
+)
+for d in ${ds[@]}; do
+    mkdir -p $d
+done
 
 # create symlinks
-ln -sf ~/.dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
-ln -sf ~/.dotfiles/.config/nvim/lua/elusive.lua ~/.config/nvim/lua/elusive.lua
-ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/.dotfiles/.tmux.conf ~/.tmux.conf
-ln -sf ~/.dotfiles/.zshrc ~/.zshrc
-# do this better
+links=(
+    .config/nvim/init.vim
+    .config/nvim/lua/elusive.lua
+    .gitconfig
+    .tmux.conf
+    .zshrc
+)
+for link in ${links[@]}; do
+    ln -sf ~/.dotfiles/$link ~/$link
+done
 
