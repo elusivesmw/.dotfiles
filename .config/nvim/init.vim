@@ -1,9 +1,11 @@
 set hidden
 set number
+set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set noswapfile
+set hls is ic
 set list
 set listchars=tab:>=,trail:.
 
