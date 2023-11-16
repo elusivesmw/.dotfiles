@@ -24,6 +24,7 @@ links=(
     .config/nvim/after/plugin/lsp.lua
     .config/nvim/after/plugin/telescope.lua
     .config/nvim/after/plugin/treesitter.lua
+    .config/nvim/after/plugin/undotree.lua
     .gitconfig
     .tmux.conf
     .zshrc
