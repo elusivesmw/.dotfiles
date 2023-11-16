@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
     }
     use 'nvim-treesitter/playground'
     use 'tpope/vim-fugitive'
+    use 'mbbill/undotree'
     -- Theme
     use { "catppuccin/nvim", as = "catppuccin" }
     use { "bluz71/vim-moonfly-colors", as = "moonfly" }
