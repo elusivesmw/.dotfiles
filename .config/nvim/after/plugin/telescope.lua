@@ -4,12 +4,27 @@ require('telescope').setup({
             horizontal = { prompt_position = "top" }
         },
         sorting_strategy = 'ascending',
+    },
+    pickers = {
+        find_files = {
+            follow = true
+        }
     }
 })
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<C-_>', builtin.current_buffer_fuzzy_find, {})
-vim.keymap.set('n', '<C-f>', builtin.find_files, {})
+vim.keymap.set('n', '<C-g>', builtin.live_grep, {})
+
+-- TODO: get find files relative to current buffer working dir
+vim.keymap.set('n', '<C-f>', function()
+    builtin.find_files({ })
+    end, {})
+
+vim.keymap.set('n', '<leader>c', function()
+    builtin.find_files({ cwd = vim.fn.stdpath('config') })
+    end, {})
+
 vim.keymap.set('n', '<leader>fb', function ()
     require('telescope').extensions.file_browser.file_browser({
         path = '%:p:h',
