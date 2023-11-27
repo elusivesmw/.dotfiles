@@ -100,8 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-
-alias repos="cd ~/repos/"
+alias dotfiles="cd ~/.dotfiles"
+alias nvimconfig="cd ~/.config/nvim"
+alias repos="cd ~/repos"
 #wsl
 #alias repos="cd /mnt/c/Users/jay/source/repos"
 
