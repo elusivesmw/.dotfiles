@@ -18,7 +18,9 @@ vim.keymap.set('n', '<C-g>', builtin.live_grep, {})
 
 -- TODO: get find files relative to current buffer working dir
 vim.keymap.set('n', '<C-f>', function()
-    builtin.find_files({ })
+    builtin.find_files({
+        initial_mode = 'normal'
+    })
     end, {})
 
 vim.keymap.set('n', '<leader>c', function()
@@ -28,7 +30,8 @@ vim.keymap.set('n', '<leader>c', function()
 vim.keymap.set('n', '<leader>fb', function ()
     require('telescope').extensions.file_browser.file_browser({
         path = '%:p:h',
-        select_buffer = true
+        select_buffer = true,
+        initial_mode = 'normal'
     })
     end, {})
 
