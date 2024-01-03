@@ -1,12 +1,16 @@
 #!/bin/bash
 
-# backup nvim dir if exists
-if [ -d "~/.config/nvim" ]; then
+# create .config dir
+mkdir -p ~/.config
+
+# backup existing non-linked nvim dir
+if [ -d ~/.config/nvim ] && [ ! -L ~/.config/nvim ]; then
+    echo "backup ~/.config/nvim"
     mv ~/.config/nvim ~/.config/nvim_old
 fi
 
-# nvim dir symlink
-ln -sf ~/.dotfiles/.config/nvim ~/.config
+# create nvim dir symlink
+ln -sf ~/.dotfiles/.config/nvim ~/.config/nvim
 
 # create symlinks
 links=(
