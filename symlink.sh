@@ -16,7 +16,7 @@ function linkdir {
     if [ -d ~/$dir ]; then
         if [ ! -L ~/$dir ]; then
             echo "backing up ~/$dir"
-            mv ~/$dir ~/${dir}_old
+            mv_merge ~/$dir ~/${dir}_old
         else
             echo "$dir link found, skipping"
             return
@@ -26,6 +26,13 @@ function linkdir {
     # create dir symlink
     echo "$dir, linking"
     ln -sf ~/.dotfiles/$dir ~/$dir
+}
+
+function mv_merge {
+    source="$1"
+    target="$2"
+    cp -rl $source/. $target
+    rm -r $source
 }
 
 # create .config dir
