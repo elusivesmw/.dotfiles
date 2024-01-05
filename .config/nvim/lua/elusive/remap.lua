@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 -- in and out of insert
 vim.keymap.set("i", "<C-c>", "<esc>")
 vim.keymap.set("n", "<C-c>", "a")
