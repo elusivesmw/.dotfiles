@@ -1,54 +1,54 @@
 local function config()
-     require('telescope').setup({
+    require("telescope").setup({
         defaults = {
             layout_config = {
-                horizontal = { prompt_position = "top" }
+                horizontal = { prompt_position = "top" },
             },
-            sorting_strategy = 'ascending',
+            sorting_strategy = "ascending",
         },
         pickers = {
             find_files = {
-                follow = true
-            }
-        }
+                follow = true,
+            },
+        },
     })
-    local builtin = require('telescope.builtin')
+    local builtin = require("telescope.builtin")
 
-    vim.keymap.set('n', '<C-_>', builtin.current_buffer_fuzzy_find, {})
-    vim.keymap.set('n', '<C-g>', builtin.live_grep, {})
+    vim.keymap.set("n", "<C-_>", builtin.current_buffer_fuzzy_find, {})
+    vim.keymap.set("n", "<C-g>", builtin.live_grep, {})
 
     -- TODO: get find files relative to current buffer working dir
-    vim.keymap.set('n', '<C-f>', function()
+    vim.keymap.set("n", "<C-f>", function()
         builtin.find_files({
-            initial_mode = 'normal'
+            initial_mode = "normal",
         })
-        end, {})
+    end, {})
 
-    vim.keymap.set('n', '<leader>c', function()
-        builtin.find_files({ cwd = vim.fn.stdpath('config') })
-        end, {})
+    vim.keymap.set("n", "<leader>c", function()
+        builtin.find_files({ cwd = vim.fn.stdpath("config") })
+    end, {})
 
-    vim.keymap.set('n', '<leader>fb', function ()
-        require('telescope').extensions.file_browser.file_browser({
-            path = '%:p:h',
+    vim.keymap.set("n", "<leader>fb", function()
+        require("telescope").extensions.file_browser.file_browser({
+            path = "%:p:h",
             select_buffer = true,
-            initial_mode = 'normal'
+            initial_mode = "normal",
         })
-        end, {})
+    end, {})
 
-    vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
-
+    vim.keymap.set("n", "<leader>gf", builtin.git_files, {})
 end
 
 return {
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.4",
         -- or                            , branch = '0.1.x',
-        dependencies = { { 'nvim-lua/plenary.nvim' } },
-        config = config
+        dependencies = { { "nvim-lua/plenary.nvim" } },
+        config = config,
     },
     {
         "nvim-telescope/telescope-file-browser.nvim",
-        dependencies= { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     },
 }

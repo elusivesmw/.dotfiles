@@ -18,11 +18,10 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 
 vim.opt.list = true
-vim.opt.listchars:append {
+vim.opt.listchars:append({
     tab = ">·",
     trail = "·",
-}
+})
 
 vim.opt.termguicolors = true
-vim.cmd.colorscheme "moonfly"
-
+vim.cmd.colorscheme("moonfly")
