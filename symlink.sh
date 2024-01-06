@@ -46,6 +46,7 @@ files=(
     .gitconfig
     .tmux.conf
     .zshrc
+    .stylua.toml
 )
 for file in ${files[@]}; do
     linkfile $file
