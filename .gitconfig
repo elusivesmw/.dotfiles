@@ -3,9 +3,10 @@
     email = 78516603+elusivesmw@users.noreply.github.com
 [core]
     editor = nvim
-	pager = less
+    pager = less
 [pager]
     log = cat # show log in terminal
+    branch = cat # show branch in terminal
 [diff]
     tool = nvimdiff
 [init]
