@@ -102,6 +102,8 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias dotfiles="cd ~/.dotfiles"
 alias nvimconfig="cd ~/.config/nvim"
+alias vi="nvim"
+alias vim="nvim"
 alias repos="cd ~/repos"
 #wsl
 #alias repos="cd /mnt/c/Users/jay/source/repos"
