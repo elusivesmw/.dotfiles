@@ -1,8 +1,11 @@
+local builtin = require("telescope.builtin")
+local utils = require("telescope.utils")
+
 local function config()
     require("telescope").setup({
         defaults = {
             layout_config = {
-                horizontal = { prompt_position = "top" },
+                horizontal = { prompt_position = "top", preview_width = 0.67 },
             },
             sorting_strategy = "ascending",
         },
@@ -10,22 +13,30 @@ local function config()
             find_files = {
                 follow = true,
             },
+            lsp_references = {
+                layout_strategy = "cursor",
+                initial_mode = "normal",
+                layout_config = {
+                    width = 0.5,
+                    height = 9,
+                    preview_width = 0.5,
+                },
+            },
         },
     })
-    local builtin = require("telescope.builtin")
-
     vim.keymap.set("n", "<C-_>", builtin.current_buffer_fuzzy_find, {})
     vim.keymap.set("n", "<C-g>", builtin.live_grep, {})
 
-    -- TODO: get find files relative to current buffer working dir
     vim.keymap.set("n", "<C-f>", function()
         builtin.find_files({
+            cwd = utils.buffer_dir(),
             initial_mode = "normal",
+            --prompt_title = "Find Files in Current Dir",
         })
     end, {})
 
     vim.keymap.set("n", "<leader>c", function()
-        builtin.find_files({ cwd = vim.fn.stdpath("config") })
+        builtin.find_files({ cwd = vim.fn.stdpath("config"), initial_mode = "normal" })
     end, {})
 
     vim.keymap.set("n", "<leader>fb", function()
@@ -36,7 +47,9 @@ local function config()
         })
     end, {})
 
-    vim.keymap.set("n", "<leader>gf", builtin.git_files, {})
+    vim.keymap.set("n", "<leader>gf", function()
+        builtin.git_files({ initial_mode = "normal" })
+    end, {})
 end
 
 return {
