@@ -41,6 +41,9 @@ mkdir -p ~/.config
 # link nvim dir
 linkdir .config/nvim
 
+# link alacritty
+linkdir .config/alacritty
+
 # link files
 files=(
     .gitconfig
