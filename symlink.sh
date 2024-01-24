@@ -12,19 +12,19 @@ function linkfile {
 
 function linkdir {
     dir="$1"
-    # handle existing directories 
+    # handle existing directories
     if [ -d ~/$dir ]; then
         if [ ! -L ~/$dir ]; then
-            echo "backing up ~/$dir"
+            echo "${dir} found, backing up..."
             mv_merge ~/$dir ~/${dir}_old
         else
-            echo "$dir link found, skipping"
+            echo "$dir link found, skipping..."
             return
         fi
     fi
 
     # create dir symlink
-    echo "$dir, linking"
+    echo "linking ${dir}..."
     ln -sf ~/.dotfiles/$dir ~/$dir
 }
 
