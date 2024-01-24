@@ -6,6 +6,9 @@ sudo apt-get update
 # install tmux
 sudo apt-get install tmux -y
 
+# install ripgrep
+sudo apt-get install ripgrep -y
+
 # install prereqs
 sudo apt-get install ninja-build gettext cmake unzip curl -y
 
