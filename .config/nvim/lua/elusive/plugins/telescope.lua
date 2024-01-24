@@ -2,6 +2,8 @@ local builtin = require("telescope.builtin")
 local utils = require("telescope.utils")
 
 local function config()
+    local find_command = { "rg", "--files", "--sort", "path" }
+
     require("telescope").setup({
         defaults = {
             layout_config = {
@@ -29,6 +31,7 @@ local function config()
 
     vim.keymap.set("n", "<C-f>", function()
         builtin.find_files({
+            find_command = find_command,
             cwd = utils.buffer_dir(),
             initial_mode = "normal",
             --prompt_title = "Find Files in Current Dir",
@@ -36,7 +39,11 @@ local function config()
     end, {})
 
     vim.keymap.set("n", "<leader>c", function()
-        builtin.find_files({ cwd = vim.fn.stdpath("config"), initial_mode = "normal" })
+        builtin.find_files({
+            find_command = find_command,
+            cwd = vim.fn.stdpath("config"),
+            initial_mode = "normal",
+        })
     end, {})
 
     vim.keymap.set("n", "<leader>fb", function()
