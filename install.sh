@@ -26,6 +26,7 @@ cargo install stylua
 mkdir -p ~/repos
 cd ~/repos
 git clone --branch nightly https://github.com/neovim/neovim
+cd ~/repos/neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 
