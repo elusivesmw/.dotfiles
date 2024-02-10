@@ -1,7 +1,6 @@
-local builtin = require("telescope.builtin")
-local utils = require("telescope.utils")
-
 local function config()
+    local builtin = require("telescope.builtin")
+    local utils = require("telescope.utils")
     local find_command = { "rg", "--files", "--sort", "path" }
 
     require("telescope").setup({
