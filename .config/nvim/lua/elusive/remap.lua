@@ -6,6 +6,15 @@ vim.keymap.set("n", "<C-c>", "a")
 vim.keymap.set("n", "<C-j>", "<cmd>bn<cr>")
 vim.keymap.set("n", "<C-k>", "<cmd>bp<cr>")
 
+-- delete/copy/paste
+vim.keymap.set("v", "<leader>dd", [["_d]]) -- delete to void register
+vim.keymap.set("v", "<leader>dp", [["_dP]]) -- delete to void register and paste
+
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]) -- yank line or selection to clipboard register
+vim.keymap.set("n", "<leader>Y", [["+Y]]) -- yank line to clipboard register
+
+vim.keymap.set("n", "<leader>p", [["+p]]) -- paste from clipboard register
+
 -- visually move selected lines
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
