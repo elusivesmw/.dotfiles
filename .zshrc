@@ -77,6 +77,21 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# detect wsl
+wsl=false
+if grep -qi microsoft /proc/version; then
+    echo "WSL detected."
+    wsl=true
+fi
+
+# wsl specific commands
+if [ "$wsl" = true ]; then
+     # set browser to windows chrome
+    echo "setting BROWSER env var..."
+    export BROWSER=/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe
+    echo "$BROWSER"
+fi
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
