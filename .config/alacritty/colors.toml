@@ -1,0 +1,9 @@
+[colors.bright]
+black = "#625e4c"
+
+[colors.normal]
+black = "#1a1a1a"
+
+[colors.primary]
+background = "#080808"
+foreground = "#eeeeee"

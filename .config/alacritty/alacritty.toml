@@ -1,0 +1,8 @@
+import = ["/home/elusive/.config/alacritty/moonfly.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[shell]
+args = ["--login", "-c", "tmux attach || tmux"]
+program = "/usr/bin/zsh"
