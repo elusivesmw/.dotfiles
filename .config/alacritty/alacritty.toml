@@ -6,3 +6,9 @@ TERM = "xterm-256color"
 [shell]
 args = ["--login", "-c", "tmux attach || tmux"]
 program = "/usr/bin/zsh"
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular" }
+bold = { family = "Hack Nerd Font", style = "Bold" }
+bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }
+italic = { family = "Hack Nerd Font", style = "Italic" }
