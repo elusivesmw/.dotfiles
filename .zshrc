@@ -94,6 +94,9 @@ fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# add go
+export PATH=$PATH:/usr/local/go/bin
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
