@@ -16,9 +16,12 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 
 vim.opt.list = true
+
 vim.opt.listchars:append({
-    tab = ">·",
+    tab = "▏ ", -- other good tab options │🢒➜
+    leadmultispace = "▏   ",
     trail = "·",
+    --eol = "↵",
 })
 
 vim.opt.showmode = false -- not needed with lualine

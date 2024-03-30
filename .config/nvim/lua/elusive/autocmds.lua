@@ -6,12 +6,26 @@ augroup("setIndent", { clear = true })
 autocmd("Filetype", {
     group = "setIndent",
     pattern = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
-    command = "setlocal tabstop=2 softtabstop=2 shiftwidth=2",
+    callback = function()
+        vim.opt.tabstop = 2
+        vim.opt.softtabstop = 2
+        vim.opt.shiftwidth = 2
+        vim.opt.listchars:append({
+            leadmultispace = "▏ ",
+        })
+    end,
 })
 
 -- 8 space tabs
 autocmd("Filetype", {
     group = "setIndent",
     pattern = { "asm" },
-    command = "setlocal tabstop=8 softtabstop=8 shiftwidth=8 ",
+    callback = function()
+        vim.opt.tabstop = 8
+        vim.opt.softtabstop = 8
+        vim.opt.shiftwidth = 8
+        vim.opt.listchars:append({
+            leadmultispace = "▏       ",
+        })
+    end,
 })
