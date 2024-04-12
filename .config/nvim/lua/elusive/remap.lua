@@ -2,6 +2,9 @@
 vim.keymap.set("i", "<C-c>", "<esc>")
 vim.keymap.set("n", "<C-c>", "a")
 
+-- esc out of hlsearch
+vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<cr>")
+
 -- prev/next buffers
 vim.keymap.set("n", "<C-j>", "<cmd>bn<cr>")
 vim.keymap.set("n", "<C-k>", "<cmd>bp<cr>")
