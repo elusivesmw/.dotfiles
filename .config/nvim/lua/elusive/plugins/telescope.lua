@@ -50,13 +50,13 @@ local function config()
         })
     end, { desc = "[S]earch [F]iles in current directory" })
 
-    vim.keymap.set("n", "<leader>c", function()
+    vim.keymap.set("n", "<leader>sc", function()
         builtin.find_files({
             find_command = find_command,
             cwd = vim.fn.stdpath("config"),
             initial_mode = "normal",
         })
-    end, { desc = "Search [C]onfig" })
+    end, { desc = "[S]earch [C]onfig" })
 
     vim.keymap.set("n", "<leader>fb", function()
         require("telescope").extensions.file_browser.file_browser({
