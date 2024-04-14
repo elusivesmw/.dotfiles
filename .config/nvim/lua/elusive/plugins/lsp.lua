@@ -19,6 +19,19 @@ local function config()
         map("n", "K", vim.lsp.buf.hover, "Hover Documentation")
         map("n", "gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
         map({ "i", "n" }, "<C-h>", vim.lsp.buf.signature_help, "[G]oto Signature [H]elp")
+
+        -- autocmd for highlighting lsp references
+        if client and client.server_capabilities.documentHighlightProvider then
+            vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+                buffer = bufnr,
+                callback = vim.lsp.buf.document_highlight,
+            })
+
+            vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+                buffer = bufnr,
+                callback = vim.lsp.buf.clear_references,
+            })
+        end
     end)
 
     require("mason").setup({})

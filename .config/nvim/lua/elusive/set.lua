@@ -8,6 +8,7 @@ vim.opt.smartindent = true
 vim.opt.scrolloff = 10
 
 vim.opt.swapfile = false
+vim.opt.updatetime = 1000
 vim.opt.undofile = true
 -- vim.opt.undodir = os.getenv("HOME") .."/.vim/undodir"
 
