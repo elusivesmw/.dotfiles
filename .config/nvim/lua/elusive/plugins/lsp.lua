@@ -19,7 +19,6 @@ local function config()
         map("n", "K", vim.lsp.buf.hover, "LSP Hover Documentation")
         map("n", "gD", vim.lsp.buf.declaration, "LSP [G]oto [D]eclaration")
         map({ "i", "n" }, "<C-h>", vim.lsp.buf.signature_help, "LSP [G]oto Signature [H]elp")
-        map("n", "<leader>f", vim.lsp.buf.format, "LSP [F]ormat")
 
         -- autocmd for highlighting lsp references
         if client and client.server_capabilities.documentHighlightProvider then
@@ -35,9 +34,10 @@ local function config()
         end
     end)
 
+    local ensure_installed = { "gopls", "lua_ls", "rust_analyzer", "tsserver", "stylua" }
     require("mason").setup({})
+    require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
     require("mason-lspconfig").setup({
-        ensure_installed = { "gopls", "lua_ls", "rust_analyzer", "tsserver" },
         handlers = {
             lsp_zero.default_setup,
             lua_ls = function()
@@ -70,6 +70,7 @@ return {
             --- Uncomment these if you want to manage LSP servers from neovim
             { "williamboman/mason.nvim" },
             { "williamboman/mason-lspconfig.nvim" },
+            { "WhoIsSethDaniel/mason-tool-installer.nvim" },
             -- LSP Support
             { "neovim/nvim-lspconfig" },
             -- Autocompletion

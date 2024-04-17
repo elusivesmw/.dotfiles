@@ -20,9 +20,6 @@ nvm install 18
 # install rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-# install stylua
-cargo install stylua
-
 # install go
 goversion="go1.22.0.linux-amd64.tar.gz"
 curl --create-dirs --output-dir "tmp" -OL "https://go.dev/dl/${goversion}"
