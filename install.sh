@@ -11,7 +11,7 @@ sudo apt-get update
 
 # install build tools, ripgrep, tmux
 # nvim prereqs: ninja-build gettext cmake unzip curl
-sudo apt-get install ninja-build gettext cmake unzip curl ripgrep tmux -y
+sudo apt install ninja-build gettext cmake unzip curl ripgrep tmux fzf bat -y
 
 # install nvm and node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash

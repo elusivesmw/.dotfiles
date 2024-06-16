@@ -126,6 +126,8 @@ alias repos="cd ~/repos"
 #wsl
 #alias repos="cd /mnt/c/Users/jay/source/repos"
 
+# fzf open in nvim
+alias fzf='fzf --preview="batcat --color=always {}" | xargs -r nvim'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
