@@ -4,8 +4,11 @@ import = ["/home/elusive/.config/alacritty/moonfly.toml"]
 TERM = "xterm-256color"
 
 [shell]
-args = ["--login", "-c", "tmux attach || tmux"]
 program = "/usr/bin/zsh"
+args = ["--login", "-c", "tmux attach || tmux"]
+# wsl
+# program = "C:\\Windows\\System32\\wsl.exe"
+# args = ["--cd ~", "tmux attach || tmux"]
 
 [font]
 normal = { family = "Hack Nerd Font", style = "Regular" }
