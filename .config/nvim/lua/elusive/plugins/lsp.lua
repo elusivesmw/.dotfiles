@@ -34,7 +34,7 @@ local function config()
         end
     end)
 
-    local ensure_installed = { "gopls", "lua_ls", "rust_analyzer", "tsserver", "stylua" }
+    local ensure_installed = { "gopls", "lua_ls", "rust_analyzer", "ts_ls", "stylua" }
     require("mason").setup({})
     require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
     require("mason-lspconfig").setup({
