@@ -28,4 +28,3 @@ vim.opt.listchars:append({
 vim.opt.showmode = false -- not needed with lualine
 
 vim.opt.termguicolors = true
-vim.cmd.colorscheme("moonfly")

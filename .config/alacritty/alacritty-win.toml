@@ -1,0 +1,7 @@
+# win
+
+import = ["~/AppData/Roaming/alacritty/tokyonight.toml"]
+
+[shell]
+program = "C:/Program Files/Git/usr/bin/bash.exe -i -l"
+

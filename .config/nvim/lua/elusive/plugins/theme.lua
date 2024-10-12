@@ -7,8 +7,9 @@ return {
         opts = {},
         config = function()
             require("tokyonight").setup({
-                style = "storm",
+                style = "night",
             })
+            vim.cmd.colorscheme("tokyonight")
         end,
     },
     {
@@ -20,6 +21,7 @@ return {
             require("catppuccin").setup({
                 flavour = "mocha",
             })
+            --vim.cmd.colorscheme("catppuccin")
         end,
     },
     {
@@ -27,7 +29,9 @@ return {
         as = "moonfly",
         lazy = false,
         priority = 1000,
-        config = function() end,
+        config = function()
+            --vim.cmd.colorscheme("moonfly")
+        end,
     },
     "nvim-tree/nvim-web-devicons",
 }

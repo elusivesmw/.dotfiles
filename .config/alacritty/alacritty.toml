@@ -1,17 +1,6 @@
-import = ["/home/elusive/.config/alacritty/moonfly.toml"]
+# main config
 
-[env]
-TERM = "xterm-256color"
+# change this import to switch between: nix, wsl, win
+import = ["~/.config/alacritty/alacritty-nix.toml"]
+import = ["~/.config/alacritty/alacritty-base.toml"]
 
-[shell]
-program = "/usr/bin/zsh"
-args = ["--login", "-c", "tmux attach || tmux"]
-# wsl
-# program = "C:\\Windows\\System32\\wsl.exe"
-# args = ["--cd ~", "tmux attach || tmux"]
-
-[font]
-normal = { family = "Hack Nerd Font", style = "Regular" }
-bold = { family = "Hack Nerd Font", style = "Bold" }
-bold_italic = { family = "Hack Nerd Font", style = "Bold Italic" }
-italic = { family = "Hack Nerd Font", style = "Italic" }

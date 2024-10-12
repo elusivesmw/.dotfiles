@@ -1,0 +1,8 @@
+# wsl
+
+import = ["~/AppData/Roaming/alacritty/tokyonight.toml"]
+
+[shell]
+program = "C:/Windows/System32/wsl.exe"
+args = ["--cd ~", "tmux attach || tmux"]
+

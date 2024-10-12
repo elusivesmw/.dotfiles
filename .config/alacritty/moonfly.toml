@@ -1,3 +1,6 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
 [colors.bright]
 black = "#949494"
 blue = "#74b2ff"
@@ -6,7 +9,7 @@ green = "#36c692"
 magenta = "#ae81ff"
 red = "#ff5189"
 white = "#e4e4e4"
-yellow = "#c2c292"
+yellow = "#c6c684"
 
 [colors.cursor]
 cursor = "#8e8e8e"
