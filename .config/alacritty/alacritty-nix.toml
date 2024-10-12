@@ -1,6 +1,6 @@
 # nix
 
-import = ["~/.config/alacritty/tokyonight.toml"]
+import = ["~/.config/alacritty/tokyo-night.toml"]
 
 [shell]
 program = "/usr/bin/zsh"

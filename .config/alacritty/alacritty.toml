@@ -1,6 +1,8 @@
 # main config
 
 # change this import to switch between: nix, wsl, win
-import = ["~/.config/alacritty/alacritty-nix.toml"]
-import = ["~/.config/alacritty/alacritty-base.toml"]
+import = [
+    "~/.config/alacritty/alacritty-nix.toml",
+    "~/.config/alacritty/alacritty-base.toml"
+]
 
