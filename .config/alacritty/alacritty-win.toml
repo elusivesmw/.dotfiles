@@ -1,5 +1,7 @@
 # win
 
+# shortcut target:
+# "C:\Program Files\Alacritty\alacritty.exe" --config-file "%AppData%\alacritty\alacritty-win.toml"
 import = [
     "~/AppData/Roaming/alacritty/alacritty-base.toml",
     "~/AppData/Roaming/alacritty/tokyo-night.toml"

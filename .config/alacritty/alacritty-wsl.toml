@@ -1,5 +1,7 @@
 # wsl
 
+# shortcut target:
+# "C:\Program Files\Alacritty\alacritty.exe" --config-file "%AppData%\alacritty\alacritty-wsl.toml"
 import = [
     "~/AppData/Roaming/alacritty/alacritty-base.toml",
     "~/AppData/Roaming/alacritty/tokyo-night.toml"
