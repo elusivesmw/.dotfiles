@@ -1,8 +1,0 @@
-# nix
-
-import = ["~/.config/alacritty/tokyo-night.toml"]
-
-[shell]
-program = "/usr/bin/zsh"
-args = ["--login", "-c", "tmux attach || tmux"]
-

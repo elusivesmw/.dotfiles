@@ -1,6 +1,9 @@
 # wsl
 
-import = ["~/AppData/Roaming/alacritty/tokyo-night.toml"]
+import = [
+    "~/AppData/Roaming/alacritty/alacritty-base.toml",
+    "~/AppData/Roaming/alacritty/tokyo-night.toml"
+]
 
 [shell]
 program = "C:/Windows/System32/wsl.exe"
