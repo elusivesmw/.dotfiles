@@ -1,7 +1,7 @@
 # nix
 
 import = [
-    "~/.config/alacritty/alacritty-base.toml"
+    "~/.config/alacritty/alacritty-base.toml",
     "~/.config/alacritty/tokyo-night.toml"
 ]
 
