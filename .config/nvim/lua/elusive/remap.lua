@@ -9,6 +9,16 @@ vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<cr>")
 vim.keymap.set("n", "<C-j>", "<cmd>bn<cr>")
 vim.keymap.set("n", "<C-k>", "<cmd>bp<cr>")
 
+-- toggle colorcolumn
+vim.keymap.set("n", "<leader>cc", function()
+    local cc = vim.o.colorcolumn
+    if cc == "" then
+        vim.o.colorcolumn = "81"
+    else
+        vim.o.colorcolumn = ""
+    end
+end)
+
 -- delete/copy/paste
 vim.keymap.set("v", "<leader>dd", [["_d]]) -- delete to void register
 vim.keymap.set("v", "<leader>dp", [["_dP]]) -- delete to void register and paste
