@@ -15,13 +15,8 @@ local function config()
                 follow = true,
             },
             lsp_references = {
-                layout_strategy = "cursor",
+                theme = "ivy",
                 initial_mode = "normal",
-                layout_config = {
-                    width = 0.5,
-                    height = 9,
-                    preview_width = 0.5,
-                },
             },
         },
     })
