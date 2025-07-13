@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # check if root
-if [ "$EUID" -ne 0 ]; then 
-    echo "Run as root"
+if [ "$EUID" -eq 0 ]; then 
+    echo "Don't run as root. Script will use sudo when needed"
     exit
 fi
 
@@ -15,7 +15,7 @@ sudo apt install ninja-build gettext cmake unzip curl ripgrep tmux fzf bat -y
 
 # install nvm and node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-nvm install 18
+nvm install 20
 
 # install rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y
@@ -29,6 +29,7 @@ sudo rm -rf /usr/local/go && tar -C /usr/local -xzf "tmp/$goversion"
 # install neovim nightly
 mkdir -p ~/repos
 cd ~/repos
+rm -rf neovim
 git clone --branch nightly https://github.com/neovim/neovim
 cd ~/repos/neovim
 make CMAKE_BUILD_TYPE=RelWithDebInfo

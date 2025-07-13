@@ -44,7 +44,7 @@ linkdir .config/nvim
 # link alacritty
 linkdir .config/alacritty
 
-# link wezterm
+# link wezterm 
 linkdir .config/wezterm
 
 # link files

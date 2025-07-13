@@ -5,10 +5,10 @@ local function config()
             -- Conform will run multiple formatters sequentially
             -- python = { "isort", "black" },
             -- Use a sub-list to run only the first available formatter
-            javascript = { { "prettierd", "prettier" } },
-            javascriptreact = { { "prettierd", "prettier" } },
-            typescript = { { "prettierd", "prettier" } },
-            typescriptreact = { { "prettierd", "prettier" } },
+            javascript = { "prettierd", "prettier" },
+            javascriptreact = { "prettierd", "prettier" },
+            typescript = { "prettierd", "prettier" },
+            typescriptreact = { "prettierd", "prettier" },
         },
         format_on_save = {
             timeout = 500,

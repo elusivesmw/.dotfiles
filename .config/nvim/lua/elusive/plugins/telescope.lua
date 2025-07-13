@@ -18,6 +18,10 @@ local function config()
                 theme = "ivy",
                 initial_mode = "normal",
             },
+            diagnostics = {
+                theme = "ivy",
+                initial_mode = "normal",
+            },
         },
     })
 
