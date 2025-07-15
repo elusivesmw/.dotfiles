@@ -90,19 +90,16 @@ if [ "$wsl" = true ]; then
     echo "setting BROWSER env var..."
     export BROWSER=/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe
     echo "$BROWSER"
-
-    echo "adding cargo path..."
-    # add rust
-    export PATH=$PATH:~/.cargo/bin
-
-    echo "adding zig path..."
-    export PATH=$PATH:/snap/zig/current
 fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# add rust
+export PATH=$PATH:~/.cargo/bin
 # add go
 export PATH=$PATH:/usr/local/go/bin
+# add zig
+export PATH=$PATH:/snap/zig/current
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
