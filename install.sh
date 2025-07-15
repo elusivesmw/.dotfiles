@@ -21,9 +21,9 @@ nvm install 20
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # install go
-goversion="go1.22.0.linux-amd64.tar.gz"
-curl --create-dirs --output-dir "tmp" -OL "https://go.dev/dl/${goversion}"
-sudo rm -rf /usr/local/go && tar -C /usr/local -xzf "tmp/$goversion"
+goversion="go1.24.5.linux-amd64.tar.gz"
+sudo curl --create-dirs --output-dir "tmp" -OL "https://go.dev/dl/${goversion}"
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf "tmp/$goversion"
 # go path is set in .zshrc
 
 # install neovim nightly
